@@ -19,10 +19,6 @@ float:left;
   text-align: center;
 }
 
-#player1-current-score {
-  /* display: none; */
-}
-
 #player2-current-score {
   display: none;
 }
@@ -34,3 +30,19 @@ float:left;
 #player2-win {
   display: none;
 }
+img{
+  height: 250px;
+  width: 250px;
+  padding: 10px;
+  border-width: 8px;
+  border-style:ridge;
+  border-width: 10px;
+  border-radius: 10px;
+  border-radius: 50%;
+  border-color: rgb(15, 10, 66);
+  box-shadow: 0 20px 40px rgba(4, 0, 0, 0.19), 0 12px 12px rgba(72, 10, 10, 0.23);
+  /* filter: blur(20px) grayscale();  */
+}
+/* https://static.wikia.nocookie.net/streetfighter/images/4/46/Ryurender.png/revision/latest/scale-to-width-down/350?cb=20170728171704 */
+/* 
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyQVuV8m5m7Vl6mFxTHv2sTr2LQdyGpKJtNg&usqp=CAU */

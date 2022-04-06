@@ -43,20 +43,22 @@ let player2 = new Player(false);
 $("#roll").on("click", "#roll-button", function() {    
   player1.diceRoll();
   player2.diceRoll();
-  $("#player1-current-score").text("Player 1 Current Score " + player1.currentPlayersScore);
-  $("#player2-current-score").text("Player 2 Current Score " + player2.currentPlayersScore);
+  $("#player1-current-score").text("Current Rolls " + player1.currentPlayersScore);
+  $("#player2-current-score").text("Current Rolls " + player2.currentPlayersScore);
   if (player1.currentPlayersScore[0] === 1) {
     player1.turn = false
     player2.turn = true
     player1.currentPlayersScore.pop();
     $("#player2-current-score").show();
     $("#player1-current-score").hide();
+    alert("You rolled a 1 :(")
   } else if (player2.currentPlayersScore[0] === 1)  {
     player1.turn = true
     player2.turn = false
     player2.currentPlayersScore.pop();
     $("#player1-current-score").show();
     $("#player2-current-score").hide();
+    alert("You rolled a 1 :(")
   }
 })
   
@@ -81,7 +83,3 @@ $("#roll").on("click", "#roll-button", function() {
 
   
 });
-
-// $( "p" ).click(function() {
-//   $( this ).slideUp();
-// });
