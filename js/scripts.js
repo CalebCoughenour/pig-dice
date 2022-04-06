@@ -19,7 +19,7 @@ Player.prototype.diceRoll = function(){
   if (num != 1 && this.turn == true){
     this.currentPlayersScore.push(num);  
   } else {
-  this.currentPlayersScore.splice(0, this.currentPlayersScore.length, 0);
+  this.currentPlayersScore.splice(0, this.currentPlayersScore.length);
   this.turn = false;
   }
   return this.currentPlayersScore;
@@ -30,7 +30,7 @@ Player.prototype.updatePlayerScore = function() {
   for (let i = 0; i < length; i = i + 1) {
     this.score = this.score + this.currentPlayersScore[i];
   }
-  this.currentPlayersScore.splice(0, this.currentPlayersScore.length, 0);
+  this.currentPlayersScore.splice(0, this.currentPlayersScore.length);
   return this.score
 }
 
@@ -41,17 +41,29 @@ $(document).ready(function() {
 let player1 = new Player(true);
 let player2 = new Player(false);
 
-  $("#buttons").on("click", "#roll-button", function() {    
+  $("#roll").on("click", "#roll-button", function() {    
    player1.diceRoll();
-   player1.updatePlayerScore();
-   console.log(player1);
    player2.diceRoll();
-   player2.updatePlayerScore();
-   console.log(player2);
-  $("player1-score-display").text(player1.score);
-  $("player2-score-display").text(player2.score);
+   $("#player1-current-score").text(player1.currentPlayersScore);
+   $("#player2-current-score").text(player2.currentPlayersScore);
   })
+  
+  $("#end").on("click", "#end-turn", function() {   
+   player1.updatePlayerScore();
+   player2.updatePlayerScore();
+   if (player1.turn === true) {
+     player1.turn = false;
+     player2.turn = true;
+   } else { 
+     player2.turn = false;
+     player1.turn = true;
+    }
+    $("#player1-score-display").text(player1.score);
+    $("#player2-score-display").text(player2.score);
 })
+})
+
+
 
 // $( "p" ).click(function() {
 //   $( this ).slideUp();
