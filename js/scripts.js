@@ -19,25 +19,31 @@
 
 // document.getElementById("roll-button").addEventListener("click", rollDice);
 
+
+
 function rollDice() {
   return Math.floor(Math.random() * 6) + 1;
   }
-  
 
 
-
-function Player(name, score, turn) {
+function Player(name, score, turn, currentPlayersScore) {
 this.name = name;
 this.score = score;
 this.turn = turn;
+this.currentPlayersScore = [];
 }
 
 // roll prototype 
 
 Player.prototype.diceRoll = function(){
   let num = rollDice();
-  this.score = this.score + num;
-  return this.score;
+  if (num != 1){
+    this.currentPlayersScore.push(num);  
+  } else {
+  this.currentPlayersScore.splice(0, this.currentPlayersScore.length, 0);
+  this.turn = false;
+  }
+  return this.currentPlayersScore;
 }
 
 
