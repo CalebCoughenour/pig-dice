@@ -15,8 +15,10 @@ float:left;
   text-align: center;
 }
 body {
+  font-family: 'Anton', sans-serif;
   font-size: larger;
-  color: red;
+  color: rgb(244, 133, 133);
+  -webkit-text-stroke: 1px black;
 }
 #container {  
   display: flex;
