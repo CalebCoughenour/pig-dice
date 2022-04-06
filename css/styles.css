@@ -1,0 +1,36 @@
+/* #player1{
+float:left;
+}
+#player1-score {
+float:left;
+}
+#player2{
+float;
+}
+#player2-score {
+float:left;
+} */
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+  text-align: center;
+}
+
+#player1-current-score {
+  /* display: none; */
+}
+
+#player2-current-score {
+  display: none;
+}
+
+#player1-win {
+  display: none;
+}
+
+#player2-win {
+  display: none;
+}
