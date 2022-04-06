@@ -79,6 +79,11 @@ $("#roll").on("click", "#roll-button", function() {
     $("#player1-score-display").text(player1.score);
     $("#player2-score-display").text(player2.score);
   
+    if (player1.score >= 100) {
+      $("#player1-win").show();
+    } else if (player2.score >= 100) {
+      $("#player2-win").show();
+    }
   })
 
   
