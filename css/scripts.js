@@ -5,8 +5,8 @@ function rollDice() {
   }
 
 
-function Player(turn) {
-this.name = "";
+function Player(name, score, turn, currentPlayersScore) {
+this.name = name;
 this.score = 0;
 this.turn = turn;
 this.currentPlayersScore = [];
@@ -16,7 +16,7 @@ this.currentPlayersScore = [];
 
 Player.prototype.diceRoll = function(){
   let num = rollDice();
-  if (num != 1 && this.turn == true){
+  if (num != 1 && turn == true){
     this.currentPlayersScore.push(num);  
   } else {
   this.currentPlayersScore.splice(0, this.currentPlayersScore.length, 0);
@@ -33,26 +33,13 @@ Player.prototype.updatePlayerScore = function() {
   this.currentPlayersScore.splice(0, this.currentPlayersScore.length, 0);
   return this.score
 }
-
 //User Interface Logic
 
 $(document).ready(function() {
+  $("#roll-button").on("click", "function(event) {
+  }
+});
 
-let player1 = new Player(true);
-let player2 = new Player(false);
-
-  $("#buttons").on("click", "#roll-button", function() {    
-   player1.diceRoll();
-   player1.updatePlayerScore();
-   console.log(player1);
-   player2.diceRoll();
-   player2.updatePlayerScore();
-   console.log(player2);
-  $("player1-score-display").text(player1.score);
-  $("player2-score-display").text(player2.score);
-  })
-})
-
-// $( "p" ).click(function() {
-//   $( this ).slideUp();
-// });
+$( "p" ).click(function() {
+  $( this ).slideUp();
+});
