@@ -12,6 +12,8 @@ Test: "It should output a random number 1-6"
 Code: diceRoll();
 Expected Output: 1-6
 
+*****************************************
+
 Describe: Player.diceRoll()
 
 Test: "It will store a random number"
@@ -26,5 +28,20 @@ Expected Output: currentPlayersScore = [1-6]
 
 Test: "It will zero out currentPlayersScore array if a 1 is rolled"
 Code: this.currentPlayersScore.splice(0, this.currentPlayersScore.length, 0);
-  this.turn = false;
 Expected Output: currentPlayerScore = [0]
+
+*****************************************
+
+Describe: Player.updatePlayerScore()
+
+Test: "It should receive currentPlayersScore and add them together"
+Code: let player = new Player("user", 0, true);
+player.rollDice();
+1-6;
+player.updatePlayerScore();
+1-6;
+Expected Output: Player.score = 1-6
+
+Test: "It should clear currentPlayerScore"
+Code: this.currentPlayersScore.splice(0, this.currentPlayersScore.length, 0);
+Expected Output: curremtPlayerScore = [0]

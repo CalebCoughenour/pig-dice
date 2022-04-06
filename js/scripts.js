@@ -1,24 +1,3 @@
-// function rollDice() {
-//   const dice = [...document.querySelectorAll(".die-list")];
-//   dice.forEach(die => {
-//     toggleClasses(die);
-//     die.dataset.roll = getRandomNumber(1, 6);
-//   });
-// }
-
-// function toggleClasses(die) {
-//   die.classList.toggle("odd-roll");
-//   die.classList.toggle("even-roll");
-// }
-
-// function getRandomNumber(min, max) {
-//   min = Math.ceil(min);
-//   max = Math.floor(max);
-//   return Math.floor(Math.random() * (max - min + 1)) + min;
-// }
-
-// document.getElementById("roll-button").addEventListener("click", rollDice);
-
 
 
 function rollDice() {
@@ -28,7 +7,7 @@ function rollDice() {
 
 function Player(name, score, turn, currentPlayersScore) {
 this.name = name;
-this.score = score;
+this.score = 0;
 this.turn = turn;
 this.currentPlayersScore = [];
 }
@@ -46,7 +25,12 @@ Player.prototype.diceRoll = function(){
   return this.currentPlayersScore;
 }
 
+Player.prototype.updatePlayerScore = function() {
+  let length = this.currentPlayersScore.length;
+  for (let i = 0; i < length; i = i + 1) {
+    this.score = this.score + this.currentPlayersScore[i];
+  }
+  this.currentPlayersScore.splice(0, this.currentPlayersScore.length, 0);
+  return this.score
+}
 
-
-
-  // return `${this.name} rolled ${this.score}` 
