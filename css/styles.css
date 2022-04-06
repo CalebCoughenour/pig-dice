@@ -14,8 +14,11 @@ float:left;
 #player1-win {
   text-align: center;
 }
-
-#container {
+body {
+  font-size: larger;
+  color: red;
+}
+#container {  
   display: flex;
   flex-direction: column;
   justify-content: center;
