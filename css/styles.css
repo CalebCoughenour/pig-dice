@@ -1,33 +1,25 @@
-/* #player1{
-float:left;
-}
-#player1-score {
-float:left;
-}
-#player2{
-float;
-}
-#player2-score {
-float:left;
-} */
-
 #player1-win {
   text-align: center;
 }
 body {
-  font-family: 'Anton', sans-serif;
-  font-size: larger;
-  color: rgb(244, 133, 133);
-  -webkit-text-stroke: 1px black;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 #container {  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 15%;
+  margin-top: 5%;
+  margin-bottom: 15%;
   text-align: center;
   background-image: url("https://pbs.twimg.com/media/EVLyO8VVAAIt1ru?format=jpg&name=large");
+  background-color: #3d1010; 
+  height: 900px; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+#title{
+  font-size: 90px;
 }
 
 #player2-current-score {
@@ -41,9 +33,9 @@ body {
 #player2-win {
   display: none;
 }
-img{
-  height: 350px;
-  width: 350px;
+#playerz{
+  height: 250px;
+  width: 250px;
   padding: 10px;
   border-width: 8px;
   border-style:ridge;
@@ -62,3 +54,49 @@ img{
   transition: all 0.9s;
   transform: scale(2.0)
 }
+
+#ken {
+  height: 850px;
+  width: 850px;
+  display: none;
+  margin-bottom: 15%;
+}
+#kenblock {
+  height: 950px;
+  width: 1200px;
+  display: none;
+  transform: scaleX(-1)
+}
+#ryu {
+  height: 800px;
+  width: 800px;
+  display: none;
+}
+#bros {
+  height: 800px;
+  width: 800px;
+}
+#ryublock {
+  display: none;
+  height: 950px;
+  width: 1200px;
+  transform: scaleX(-1)
+}
+#end {
+display: none; 
+}
+#ryu-defense {
+height: 350px;
+width: 350px;
+display: none;
+margin-bottom:5%;
+transform: scaleX(-1)
+}
+#ken-defense {
+  height: 350px;
+  width: 350px;
+  display: none;
+  margin-bottom:5%;
+
+  }
+  
