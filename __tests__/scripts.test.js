@@ -18,5 +18,13 @@ describe('Player', () => {
     let newPlayer = new Player(true);
     expect(newPlayer.turn).toEqual(true);
   });
+
+  test('should build a whole Player object', () => {
+
+    let newPlayer = new Player(true);
+    expect(newPlayer.score).toEqual(0);
+    expect(newPlayer.turn).toEqual(true);
+    expect(newPlayer.currentPlayersScore).toEqual([]);
+  });
 });
 
