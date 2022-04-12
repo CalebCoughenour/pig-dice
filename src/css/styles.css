@@ -1,12 +1,10 @@
-#player1-win {
-  text-align: center;
-}
-body {
+ body {
   font-family: 'Press Start 2P', cursive;
   font-size: 35px;
   color: rgb(0, 0, 0);
   -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
+ 
 #container {  
   margin-top: 5%;
   margin-bottom: 15%;
@@ -17,8 +15,9 @@ body {
   background-position: center;
   background-repeat: no-repeat; 
   background-size: cover;
-}
-#title{
+} 
+
+ #title {
   font-size: 90px;
 }
 
@@ -33,6 +32,11 @@ body {
 #player2-win {
   display: none;
 }
+
+#player1-win {
+  text-align: center;
+}
+
 #playerz{
   height: 250px;
   width: 250px;
@@ -44,8 +48,9 @@ body {
   border-radius: 50%;
   border-color: rgb(15, 10, 66);
   box-shadow: 0 20px 40px rgba(4, 0, 0, 0.19), 0 12px 12px rgba(72, 10, 10, 0.23);
-  /* filter: blur(20px) grayscale();  */
+ filter: blur(20px) grayscale(); 
 }
+
 #roll:hover {
   transition: all 0.9s;
   transform: scale(2.0)
@@ -92,10 +97,10 @@ display: none;
 margin-bottom:5%;
 transform: scaleX(-1)
 }
+
 #ken-defense {
   height: 350px;
   width: 350px;
   display: none;
   margin-bottom:5%;
  }
- 
