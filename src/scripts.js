@@ -4,7 +4,6 @@ export function rollDice() {
 
 
 export function Player(turn) {
-this.name = "";
 this.score = 0;
 this.turn = turn;
 this.currentPlayersScore = [];

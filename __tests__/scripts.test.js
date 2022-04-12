@@ -1,5 +1,4 @@
-// import { exportAllDeclaration } from '@babel/types';
-import { rollDice } from './../src/scripts.js';
+import { rollDice, Player } from './../src/scripts.js';
 
 describe('rollDice', () => {
 
@@ -7,6 +6,17 @@ describe('rollDice', () => {
     const roll = rollDice();
     expect(roll).toBeGreaterThanOrEqual(1);
     expect(roll).toBeLessThan(7);
+  });
+});
+
+
+
+describe('Player', () => {
+
+  test('should receive turn status and output a player object', () => {
+
+    let newPlayer = new Player(true);
+    expect(newPlayer.turn).toEqual(true);
   });
 });
 
