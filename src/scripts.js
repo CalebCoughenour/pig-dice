@@ -13,12 +13,13 @@ this.currentPlayersScore = [];
 
 Player.prototype.diceRoll = function(){
   let num = rollDice();
-  if (num != 1 && this.turn == true){
-    this.currentPlayersScore.push(num);  
-  } else if (num === 1 && this.turn === true) {
-    this.currentPlayersScore.splice(0, this.currentPlayersScore.length, 1);
-  }
-  return this.currentPlayersScore;
+  // if (num != 1 && this.turn == true){
+  //   this.currentPlayersScore.push(num);  
+  // } else if (num === 1 && this.turn === true) {
+  //   this.currentPlayersScore.splice(0, this.currentPlayersScore.length, 1);
+  // }
+  // return this.currentPlayersScore;
+  return num;
 }
 
 Player.prototype.updatePlayerScore = function() {

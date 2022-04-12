@@ -28,3 +28,16 @@ describe('Player', () => {
   });
 });
 
+describe('Player.diceRoll', () => {
+  let reusablePlayer;
+
+  beforeEach(() => {
+    reusablePlayer = new Player(true);
+  });
+
+  test('should store a random number', () => {
+    expect(reusablePlayer.diceRoll()).toBeGreaterThanOrEqual(1);
+    expect(reusablePlayer.diceRoll()).toBeLessThan(7);
+  });
+});
+
