@@ -39,5 +39,12 @@ describe('Player.diceRoll', () => {
     expect(reusablePlayer.diceRoll()).toBeGreaterThanOrEqual(1);
     expect(reusablePlayer.diceRoll()).toBeLessThan(7);
   });
+
+  test('should add rolled number to current player score', () => {
+    reusablePlayer.diceRoll();
+    expect(reusablePlayer.currentPlayersScore).toContain(toBeGreaterThanOrEqual(1));
+    expect(reusablePlayer.currentPlayersScore).toContain(toBeLessThan(7));
+
+  });
 });
 
